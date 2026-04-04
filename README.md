@@ -1,5 +1,5 @@
 # 🛰️ SLARS-BCG-1
-### Sri Lanka All-Risk Satellite — Bandaranayake College Gampaha — Unit 1
+### SLARS — Bandaranayake College Gampaha — Unit 1
 
 > *"From orbit, it observes floods, coastline shifts, and vegetation stress, turning broad environmental signs into knowledge that communities can use."*
 
