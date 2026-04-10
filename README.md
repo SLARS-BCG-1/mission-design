@@ -163,14 +163,14 @@ SLARS-BCG-1/
 - [x] Ground station design complete
 - [x] Data pipeline design complete
 - [x] NDMSC integration plan finalised
+- [x] GitHub repository population — uploading all design documents
+- [x] OBSW development — HAL and FreeRTOS kernel (Phase 1)
+- [x] Ground station software — GNURadio flowgraphs
+- [x] Data pipeline — NDVI computation on Sentinel-2 proxy data
 
 ### 🔧 In Progress
-- [ ] GitHub repository population — uploading all design documents
 - [ ] IARU frequency coordination application (437 MHz + 145 MHz)
 - [ ] TRCSL S-band coordination (2.401 GHz)
-- [ ] OBSW development — HAL and FreeRTOS kernel (Phase 1)
-- [ ] Ground station software — GNURadio flowgraphs
-- [ ] Data pipeline — NDVI computation on Sentinel-2 proxy data
 - [ ] Crowdfunding campaign launch
 - [ ] Team expansion and role assignment
 
