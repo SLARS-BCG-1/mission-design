@@ -301,7 +301,7 @@ Each document covers one complete engineering subsystem from first principles to
 ## 🙏 Acknowledgements
 
 - Our teachers and principal at Bandaranayake College, Gampaha — for believing in us
-- Our official mission partner — for guiding us through every engineering step
+- Our official mission partners — for guiding us through every engineering step
 - The open source community — FreeRTOS, GNURadio, GPredict, GDAL, libsgp4, LittleFS, SatNOGS — whose free tools make student satellite missions possible
 - The Sri Lankan amateur radio community — for frequency coordination support
 - Every person who has shared, supported, or donated to this mission
