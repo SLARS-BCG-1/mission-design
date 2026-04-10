@@ -313,7 +313,7 @@ Each document covers one complete engineering subsystem from first principles to
 **SLARS-BCG-1**
 *Built in Sri Lanka · Watching over Sri Lanka*
 
-🇱🇰 Bandaranayake College, Gampaha · 2025
+🇱🇰 Bandaranayake College, Gampaha · 2026
 
 *"More than a scientific mission, it is a symbol of youth innovation and national hope."*
 
