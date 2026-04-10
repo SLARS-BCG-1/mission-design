@@ -294,7 +294,8 @@ Each document covers one complete engineering subsystem from first principles to
 | **SatNOGS satellite page** | Pending — registration in progress |
 | **IARU coordination** | Pending — application submitted |
 | **School website** | https://bcg.lk/ |
-| **Contact** | Via GitHub Issues or the school Inventor's Club |
+| **Project's Website** | https://slars-bcg-1.netlify.app/
+| **Contact** | Via GitHub Issues, from the project website, or the school Inventor's Club. |
 
 ---
 
