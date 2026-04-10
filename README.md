@@ -253,7 +253,7 @@ Share this repository. Tell people about building Sri Lanka's first school satel
 | Ground Station Engineer | 🔍 Recruiting |
 | Data Pipeline Developer | 🔍 Recruiting |
 
-> If you are a student at Bandaranayake College and want to join the team, contact us through the school science department.
+> If you are a student at Bandaranayake College and want to join the team, contact us through the school Inventor's Club.
 
 ---
 
