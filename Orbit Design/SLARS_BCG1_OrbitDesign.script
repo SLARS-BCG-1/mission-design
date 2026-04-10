@@ -1,0 +1,185 @@
+%General Mission Analysis Tool(GMAT) Script
+%Created: 2026-03-29 14:32:44
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft SLARS_BCG_1;
+SLARS_BCG_1.DateFormat = TAIModJulian;
+SLARS_BCG_1.Epoch = '21545';
+SLARS_BCG_1.CoordinateSystem = EarthMJ2000Eq;
+SLARS_BCG_1.DisplayStateType = Keplerian;
+SLARS_BCG_1.SMA = 6871;
+SLARS_BCG_1.ECC = 1.408341036616187e-16;
+SLARS_BCG_1.INC = 9.999999999999975;
+SLARS_BCG_1.RAAN = 306.6148021947984;
+SLARS_BCG_1.AOP = 0;
+SLARS_BCG_1.TA = 0;
+SLARS_BCG_1.DryMass = 850;
+SLARS_BCG_1.Cd = 2.2;
+SLARS_BCG_1.Cr = 1.8;
+SLARS_BCG_1.DragArea = 15;
+SLARS_BCG_1.SRPArea = 1;
+SLARS_BCG_1.SPADDragScaleFactor = 1;
+SLARS_BCG_1.SPADSRPScaleFactor = 1;
+SLARS_BCG_1.AtmosDensityScaleFactor = 1;
+SLARS_BCG_1.ExtendedMassPropertiesModel = 'None';
+SLARS_BCG_1.NAIFId = -10001001;
+SLARS_BCG_1.NAIFIdReferenceFrame = -9001001;
+SLARS_BCG_1.OrbitColor = Red;
+SLARS_BCG_1.TargetColor = Teal;
+SLARS_BCG_1.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+SLARS_BCG_1.CdSigma = 1e+70;
+SLARS_BCG_1.CrSigma = 1e+70;
+SLARS_BCG_1.Id = 'SatId';
+SLARS_BCG_1.Attitude = CoordinateSystemFixed;
+SLARS_BCG_1.SPADSRPInterpolationMethod = Bilinear;
+SLARS_BCG_1.SPADSRPScaleFactorSigma = 1e+70;
+SLARS_BCG_1.SPADDragInterpolationMethod = Bilinear;
+SLARS_BCG_1.SPADDragScaleFactorSigma = 1e+70;
+SLARS_BCG_1.AtmosDensityScaleFactorSigma = 1e+70;
+SLARS_BCG_1.ModelFile = 'aura.3ds';
+SLARS_BCG_1.ModelOffsetX = 0;
+SLARS_BCG_1.ModelOffsetY = 0;
+SLARS_BCG_1.ModelOffsetZ = 0;
+SLARS_BCG_1.ModelRotationX = 0;
+SLARS_BCG_1.ModelRotationY = 0;
+SLARS_BCG_1.ModelRotationZ = 0;
+SLARS_BCG_1.ModelScale = 1;
+SLARS_BCG_1.AttitudeDisplayStateType = 'Quaternion';
+SLARS_BCG_1.AttitudeRateDisplayStateType = 'AngularVelocity';
+SLARS_BCG_1.AttitudeCoordinateSystem = EarthMJ2000Eq;
+SLARS_BCG_1.EulerAngleSequence = '321';
+
+%----------------------------------------
+%---------- GroundStations
+%----------------------------------------
+
+Create GroundStation SriLanka_GS;
+SriLanka_GS.OrbitColor = Thistle;
+SriLanka_GS.TargetColor = DarkGray;
+SriLanka_GS.CentralBody = Earth;
+SriLanka_GS.StateType = Spherical;
+SriLanka_GS.HorizonReference = Sphere;
+SriLanka_GS.Location1 = 7.9;
+SriLanka_GS.Location2 = 80.7;
+SriLanka_GS.Location3 = 0;
+SriLanka_GS.Id = 'StationId';
+SriLanka_GS.IonosphereModel = 'None';
+SriLanka_GS.TroposphereModel = 'None';
+SriLanka_GS.DataSource = 'Constant';
+SriLanka_GS.Temperature = 295.1;
+SriLanka_GS.Pressure = 1013.5;
+SriLanka_GS.Humidity = 55;
+SriLanka_GS.MinimumElevationAngle = 10;
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel Propagator1_ForceModel;
+Propagator1_ForceModel.CentralBody = Earth;
+Propagator1_ForceModel.PrimaryBodies = {Earth};
+Propagator1_ForceModel.Drag = None;
+Propagator1_ForceModel.SRP = Off;
+Propagator1_ForceModel.RelativisticCorrection = Off;
+Propagator1_ForceModel.ErrorControl = RSSStep;
+Propagator1_ForceModel.GravityField.Earth.Degree = 4;
+Propagator1_ForceModel.GravityField.Earth.Order = 4;
+Propagator1_ForceModel.GravityField.Earth.StmLimit = 100;
+Propagator1_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+Propagator1_ForceModel.GravityField.Earth.TideModel = 'None';
+
+
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel Prop_SLARS_ForceModel;
+Prop_SLARS_ForceModel.CentralBody = Earth;
+Prop_SLARS_ForceModel.PrimaryBodies = {Earth};
+Prop_SLARS_ForceModel.Drag = None;
+Prop_SLARS_ForceModel.SRP = Off;
+Prop_SLARS_ForceModel.RelativisticCorrection = Off;
+Prop_SLARS_ForceModel.ErrorControl = RSSStep;
+Prop_SLARS_ForceModel.GravityField.Earth.Degree = 4;
+Prop_SLARS_ForceModel.GravityField.Earth.Order = 4;
+Prop_SLARS_ForceModel.GravityField.Earth.StmLimit = 100;
+Prop_SLARS_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+Prop_SLARS_ForceModel.GravityField.Earth.TideModel = 'None';
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create Propagator Prop_SLARS;
+Prop_SLARS.FM = Prop_SLARS_ForceModel;
+Prop_SLARS.Type = RungeKutta89;
+Prop_SLARS.InitialStepSize = 60;
+Prop_SLARS.Accuracy = 9.999999999999999e-12;
+Prop_SLARS.MinStep = 0.001;
+Prop_SLARS.MaxStep = 2700;
+Prop_SLARS.MaxStepAttempts = 50;
+Prop_SLARS.StopIfAccuracyIsViolated = true;
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+Create OrbitView DefaultOrbitView;
+DefaultOrbitView.SolverIterations = Current;
+DefaultOrbitView.UpperLeft = [ 0.001764705882352941 0 ];
+DefaultOrbitView.Size = [ 0.5 0.4498714652956298 ];
+DefaultOrbitView.RelativeZOrder = 93;
+DefaultOrbitView.Maximized = false;
+DefaultOrbitView.Add = {SLARS_BCG_1, Earth};
+DefaultOrbitView.CoordinateSystem = EarthMJ2000Eq;
+DefaultOrbitView.DrawObject = [ true true ];
+DefaultOrbitView.DataCollectFrequency = 1;
+DefaultOrbitView.UpdatePlotFrequency = 50;
+DefaultOrbitView.NumPointsToRedraw = 0;
+DefaultOrbitView.ShowPlot = true;
+DefaultOrbitView.MaxPlotPoints = 20000;
+DefaultOrbitView.ShowLabels = true;
+DefaultOrbitView.ViewPointReference = Earth;
+DefaultOrbitView.ViewPointVector = [ 30000 0 0 ];
+DefaultOrbitView.ViewDirection = Earth;
+DefaultOrbitView.ViewScaleFactor = 1;
+DefaultOrbitView.ViewUpCoordinateSystem = EarthMJ2000Eq;
+DefaultOrbitView.ViewUpAxis = Z;
+DefaultOrbitView.EclipticPlane = Off;
+DefaultOrbitView.XYPlane = On;
+DefaultOrbitView.WireFrame = Off;
+DefaultOrbitView.Axes = On;
+DefaultOrbitView.Grid = Off;
+DefaultOrbitView.SunLine = Off;
+DefaultOrbitView.UseInitialView = On;
+DefaultOrbitView.StarCount = 7000;
+DefaultOrbitView.EnableStars = On;
+DefaultOrbitView.EnableConstellations = On;
+
+Create GroundTrackPlot DefaultGroundTrackPlot;
+DefaultGroundTrackPlot.SolverIterations = Current;
+DefaultGroundTrackPlot.UpperLeft = [ 0.001764705882352941 0.4524421593830334 ];
+DefaultGroundTrackPlot.Size = [ 0.5 0.4498714652956298 ];
+DefaultGroundTrackPlot.RelativeZOrder = 95;
+DefaultGroundTrackPlot.Maximized = false;
+DefaultGroundTrackPlot.Add = {SLARS_BCG_1};
+DefaultGroundTrackPlot.DataCollectFrequency = 1;
+DefaultGroundTrackPlot.UpdatePlotFrequency = 50;
+DefaultGroundTrackPlot.NumPointsToRedraw = 0;
+DefaultGroundTrackPlot.ShowPlot = true;
+DefaultGroundTrackPlot.MaxPlotPoints = 20000;
+DefaultGroundTrackPlot.CentralBody = Earth;
+DefaultGroundTrackPlot.TextureMap = 'ModifiedBlueMarble.jpg';
+
+
+%----------------------------------------
+%---------- Mission Sequence
+%----------------------------------------
+
+BeginMissionSequence;
+Propagate Synchronized Prop_SLARS(SLARS_BCG_1) {SLARS_BCG_1.ElapsedSecs = 86400.0};
