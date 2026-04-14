@@ -92,63 +92,6 @@ SLARS-BCG-1 was designed through 8 engineering steps, each building on the previ
 | **8** | Ground Segment and Ops | Colombo GS, automated data pipeline, NDMSC integration |
 
 ---
-
-## 📁 Repository Structure
-
-```
-SLARS-BCG-1/
-│
-├── mission-design/           # Complete 8-step engineering design documents (PDF)
-│   ├── Step1_Orbit_Design.pdf
-│   ├── Step2_Power_Budget.pdf
-│   ├── Step3_Payload_Stack.pdf
-│   ├── Step4_COMMS_Subsystem.pdf
-│   ├── Step5_ADCS_Design.pdf
-│   ├── Step6_OBC_FlightSoftware.pdf
-│   ├── Step7_Structural_Thermal.pdf
-│   └── Step8_GroundOps.pdf
-│
-├── obsw/                     # On-board flight software (FreeRTOS / ARM Cortex-M4)
-│   ├── src/
-│   │   ├── hal/              # Hardware abstraction layer — all peripheral drivers
-│   │   ├── kernel/           # FreeRTOS configuration and task definitions
-│   │   ├── tasks/            # 8 RTOS tasks: watchdog, ADCS, power, payload, COMMS, TM, FDIR, flash
-│   │   ├── algorithms/       # SGP4 orbit propagator, EKF, B-dot, PD, PID controllers
-│   │   ├── protocols/        # CSP/AX.25 TC/TM, CFDP, APRS parser
-│   │   └── fdir/             # 4-level fault detection, isolation and recovery
-│   ├── tests/                # Unit tests (Unity framework)
-│   └── sim/                  # Software-in-the-loop simulation environment
-│
-├── ground-station/           # Ground station software
-│   ├── tc_tm/                # Telecommand sender and telemetry parser (all 32 TCs)
-│   ├── gnuradio/             # GNURadio flowgraphs — UHF GMSK + S-band BPSK demodulators
-│   ├── cfdp/                 # CFDP file delivery engine for S-band imagery
-│   └── dashboard/            # Django web dashboard for operators and NDMSC
-│
-├── data-pipeline/            # Automated science data processing
-│   ├── decode/               # JPEG2000 decode, radiometric calibration
-│   ├── geo/                  # Geometric correction, orthorectification (GDAL)
-│   ├── products/             # NDVI computation, flood classification, AIS parser
-│   └── archive/              # PostGIS database interface and product archive
-│
-├── simulations/              # Pre-launch simulation results
-│   ├── orbit/                # STK pass analysis, ground track plots
-│   ├── adcs/                 # MATLAB/Simulink attitude control simulations
-│   ├── thermal/              # Thermal model results (hot case / cold case)
-│   └── link-budget/          # Link budget worksheets for all 4 channels
-│
-├── docs/                     # Additional documentation
-│   ├── ICD.md                # Interface Control Document
-│   ├── TC_command_list.md    # Full 32-command telecommand reference
-│   ├── calibration/          # Pre-launch radiometric calibration data
-│   └── operations/           # Mission operations procedures and anomaly response
-│
-└── outreach/                 # Public engagement materials
-    ├── press/                # Press releases and media materials
-    ├── education/            # Classroom resources for Sri Lankan schools
-    └── crowdfunding/         # Campaign materials and donor updates
-```
-
 ---
 
 ## 🚀 Current Status
@@ -172,7 +115,6 @@ SLARS-BCG-1/
 - [ ] IARU frequency coordination application (437 MHz + 145 MHz)
 - [ ] TRCSL S-band coordination (2.401 GHz)
 - [ ] Crowdfunding campaign launch
-- [ ] Team expansion and role assignment
 
 ### 📋 Upcoming
 - [ ] Engineering model hardware procurement
@@ -239,19 +181,6 @@ Share this repository. Tell people about building Sri Lanka's first school satel
 **School:** Bandaranayake College, Gampaha, Sri Lanka
 **Team:** SLARS Team
 **Team size:** Building — join us
-
-| Role | Status |
-|---|---|
-| Mission Manager / Head of Admin | ✅ Assigned |
-| Systems Engineer | 🔍 Recruiting |
-| OBSW Developers (2–3) | 🔍 Recruiting |
-| EPS Engineer | 🔍 Recruiting |
-| ADCS Engineer | 🔍 Recruiting |
-| COMMS / RF Engineer | 🔍 Recruiting |
-| Structural Engineer | 🔍 Recruiting |
-| Payload Engineer | 🔍 Recruiting |
-| Ground Station Engineer | 🔍 Recruiting |
-| Data Pipeline Developer | 🔍 Recruiting |
 
 > If you are a student at Bandaranayake College and want to join the team, contact us through the school Inventor's Club.
 
