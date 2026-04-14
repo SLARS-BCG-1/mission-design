@@ -180,7 +180,27 @@ Share this repository. Tell people about building Sri Lanka's first school satel
 
 **School:** Bandaranayake College, Gampaha, Sri Lanka
 **Team:** SLARS Team
-**Team size:** Building — join us
+**Team size:** 13 — join us
+| Name | Role |
+|---|---|
+|K.R.Sasmitha Kaushan Kaushan|Team Leader & Project Manager|
+|S.O.M.A.V. Samarasekara|Team Collaborator|
+|R.P.L.L. Rajapaksha|Team Collaborator|
+|R.M.V.M.V. Rathnakyeke|Team Collaborator|
+|E. Sayul Mandil Wijewardena|Team Collaborator|
+|K.S.K. Madusanka|Team Collaborator|
+|K.A. Sandul Ranuga|Team Collaborator|
+|U.R.S.D.M.R.H.B. Dasanayake|Team Collaborator|
+|E.M.D.S. Edirisooriya|Team Collaborator|
+|R. Sesath Ranbandara|Team Collaborator|
+|K.A. Idoosha Sadil Thenuda|Team Collaborator|
+|M. Kaveesha Mihiranga Premarathna|Team Collaborator|
+|W. Viduna Dhamsilu Peiris|Team Collaborator|
+|Chamath Shamal|Mentor|
+|S.A. Ushan Dissanayake|Mentor|
+|Nidula Maneth Gunawardana|Mentor|
+|Andrew Greenberg|Mentor|
+|Manuel|Mentor|
 
 > If you are a student at Bandaranayake College and want to join the team, contact us through the school Inventor's Club.
 
