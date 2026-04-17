@@ -203,6 +203,7 @@ Share this repository. Tell people about building Sri Lanka's first school satel
 |Manuel|Mentor|
 
 > If you are a student at Bandaranayake College and want to join the team, contact us through the school Inventor's Club.
+
 > If you are a student from another school and would like to join the team, please sign up using this link: [Join Here](https://forms.gle/5vZ7eAfNztTHpnbo9)
 
 ---
