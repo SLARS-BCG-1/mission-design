@@ -87,7 +87,7 @@ SLARS-BCG-1 was designed through 8 engineering steps, each building on the previ
 | **3** | Payload Stack | 3 instruments in 67 mm, 2.15 W peak combined |
 | **4** | COMMS Subsystem | UHF 9.6 kbps + S-band 128 kbps + APRS relay, all links positive margin |
 | **5** | ADCS | 3-axis magnetorquers , ±5° nadir pointing |
-| **6** | OBC and Flight Software | ARM Cortex-M4, FreeRTOS, 8 tasks, 32 TCs, 4-level FDIR |
+| **6** | OBC and Flight Software | ARM Cortex-M4, FreeRTOS, 7 tasks, 32 TCs, 4-level FDIR |
 | **7** | Structure and Thermal | Al 6061-T6 chassis, passive thermal control, CDS Rev 14 compliant |
 | **8** | Ground Segment and Ops | Colombo GS, automated data pipeline, NDMSC integration |
 
