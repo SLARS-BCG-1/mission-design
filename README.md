@@ -169,7 +169,7 @@ We are a team students building with no institutional budget. Every contribution
 Are you a licensed radio amateur with a ground station? We would love to have you in our SatNOGS network. When we launch, your station could be one of the first to hear SLARS-BCG-1 calling from orbit.
 
 ### 🏫 Use Our Educational Resources
-All our design documents, simulations, and software are freely available under the MIT licence. If you teach space engineering, please use this project as a teaching resource. We will add classroom guides in the `/outreach/education/` folder.
+All our design documents, simulations, and software are freely available under the MIT licence. If you teach space engineering, please use this project as a teaching resource. We will add classroom guides in SLARS-BCG-1 Official Website.
 
 ### 📢 Share Our Story
 Share this repository. Tell people about building Sri Lanka's first school satellite. The more people know about SLARS-BCG-1, the better our chances of launching.
